@@ -95,7 +95,7 @@ btn_hold.addEventListener("click", () => {
       score[activePlayer];
     document.getElementById(`current--${activePlayer}`).textContent = 0;
 
-    if (score[activePlayer] >= 20) {
+    if (score[activePlayer] >= 100) {
       playing = false;
       act = score[activePlayer];
       document
