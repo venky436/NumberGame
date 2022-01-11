@@ -89,7 +89,10 @@ let act;
 // hold functionality
 
 btn_hold.addEventListener("click", () => {
+  
   if (playing) {
+ 
+
     score[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent =
       score[activePlayer];
@@ -111,15 +114,15 @@ btn_hold.addEventListener("click", () => {
   }
 });
 //new game functionality
-let newGame=()=>{
-   
+let newGame = ()=>{
+   console.log('click')
   names = prompt("enter player1 and player2 names with Space");
-  name_0.textContent = names.split(" ")[0];
-  name_1.textContent = names.split(" ")[1];
+  name_0.textContent = names ? names.split(" ")[0] : 'Player1';
+  name_1.textContent = names ? names.split(" ")[1] : 'Player2';
   init();
 }
 
-btn_new.addEventListener("click",newGame)
+btn_new.addEventListener("click", newGame);
 
 
 
